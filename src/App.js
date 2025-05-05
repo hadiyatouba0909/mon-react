@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from "./pages/Dashborard";
+import ListeProduit from "./pages/ListeProduit";
 import Login from "./components/auth/Login";
 import Register from './components/auth/Register';
 import ForgotPassword from './components/auth/ForgotPassword';
@@ -37,7 +37,7 @@ const ProtectedRoute = ({ element }) => {
   return isAuthenticated ? element : <Navigate to="/login" />;
 };
 
-// Route publique qui redirige vers le dashboard si déjà authentifié
+// Route publique qui redirige vers le liste-produit si déjà authentifié
 const PublicRoute = ({ element }) => {
   const { isAuthenticated, isLoading, checkAuth } = React.useContext(AuthContext);
   
@@ -61,9 +61,9 @@ const PublicRoute = ({ element }) => {
     );
   }
   
-  // Rediriger vers le dashboard si déjà authentifié (sauf pour la page reset-password)
+  // Rediriger vers le liste-produit si déjà authentifié (sauf pour la page reset-password)
   if (isAuthenticated && !window.location.pathname.includes('/reset-password')) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="/liste-produit" />;
   }
   
   return element;
@@ -76,7 +76,7 @@ const App = () => {
         <Router>
           <div className="App transition-colors duration-300">
             <Routes>
-              {/* Route racine redirige vers login ou dashboard selon l'état d'authentification */}
+              {/* Route racine redirige vers login ou liste-produit selon l'état d'authentification */}
               <Route path="/" element={<Navigate to="/login" />} />
               
               {/* Routes publiques (accessibles sans authentification) */}
@@ -86,7 +86,7 @@ const App = () => {
               <Route path="/reset-password/:resetToken" element={<PublicRoute element={<ResetPassword />} />} />
               
               {/* Routes protégées (nécessitent authentification) */}
-              <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
+              <Route path="/liste-produit" element={<ProtectedRoute element={<ListeProduit />} />} />
               
               {/* Redirection des routes inconnues */}
               <Route path="*" element={<Navigate to="/login" />} />

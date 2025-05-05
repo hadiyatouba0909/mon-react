@@ -13,7 +13,7 @@ import ProductDetailsModal from "../components/modal/ModalProduit/ProductDetails
 import EditProductModal from "../components/modal/ModalProduit/EditProductModal";
 import DeleteProductModal from "../components/modal/ModalProduit/DeleteProductModal";
 
-const Dashboard = () => {
+const ListeProduit = () => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
@@ -635,4 +635,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ListeProduit;

@@ -42,7 +42,7 @@ const Sidebar = ({ isCollapsed }) => {
         {/* Navigation links */}
         <nav className="flex-1 px-2 flex flex-col items-center">
           <Link
-            to="/dashboard"
+            to="/liste-produit"
             className={`flex items-center ${
               isCollapsed ? "justify-center" : "justify-start"
             } px-4 py-3 mb-2 text-white rounded-lg ${

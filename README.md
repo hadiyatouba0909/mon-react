@@ -1,76 +1,76 @@
-# Product Management System - React Frontend
+# Système de Gestion de Produits - Frontend React
 
-A comprehensive product management application built with React that includes complete authentication, a theme-switching UI, product CRUD operations, and a modern dashboard layout.
+Une application complète de gestion de produits construite avec React qui inclut une authentification complète, une interface utilisateur avec changement de thème, des opérations CRUD pour les produits.
 
-## Features
+## Fonctionnalités
 
-### 🔒 Secure Authentication
-- Login with username/email and password
-- Registration with comprehensive user information
-- Password reset functionality
-- Token-based authentication
-- User session management with context API
+### 🔒 Authentification Sécurisée
+- Connexion avec nom d'utilisateur/email et mot de passe
+- Inscription avec des informations utilisateur complètes
+- Fonctionnalité de réinitialisation de mot de passe
+- Authentification basée sur des jetons (tokens)
+- Gestion des sessions utilisateur avec l'API Context
 
-### 💻 Modern UI with Dark/Light Theme
-- Responsive design works on all devices
-- Theme switching functionality with persistent preferences
-- Sleek dark-themed interface with particle background
-- Interactive elements with hover effects
-- Loading states with animated spinners
+### 💻 Interface Moderne avec Thème Clair/Sombre
+- Design responsive fonctionnant sur tous les appareils
+- Fonctionnalité de changement de thème avec préférences persistantes
+- Interface élégante à thème sombre avec arrière-plan de particules
+- Éléments interactifs avec effets au survol
+- États de chargement avec spinners animés
 
-### 📱 Application Layout
-- Modern dashboard layout with collapsible sidebar
-- Responsive navigation with mobile support
-- User profile display in sidebar
-- Notifications and settings access in navbar
+### 📱 Disposition de l'Application
+- Mise en page de tableau de bord moderne avec barre latérale rétractable
+- Navigation responsive avec support mobile
+- Affichage du profil utilisateur dans la barre latérale
+- Accès aux notifications et aux paramètres dans la barre de navigation
 
-### 📋 Product Management
-- Complete CRUD operations for products
-- Modals for adding, editing, viewing, and deleting products
-- Form validation with error handling
-- Confirmation dialogs for critical actions
-- Responsive pagination system with customizable display
+### 📋 Gestion des Produits
+- Opérations CRUD complètes pour les produits
+- Modales pour ajouter, éditer, visualiser et supprimer des produits
+- Validation de formulaire avec gestion des erreurs
+- Boîtes de dialogue de confirmation pour les actions critiques
+- Système de pagination responsive avec affichage personnalisable
 
-### 🛠️ Technical Features
-- Form validation and error handling
-- Secure password management
-- Show/hide password toggles
-- Comprehensive state management with Context API
-- Login persistence with "Remember me" option
-- Theme-aware UI components
-- Token-based authentication
+### 🛠️ Caractéristiques Techniques
+- Validation de formulaire et gestion des erreurs
+- Gestion sécurisée des mots de passe
+- Boutons pour afficher/masquer le mot de passe
+- Gestion d'état complète avec l'API Context
+- Persistance de connexion avec l'option "Se souvenir de moi"
+- Composants UI adaptés au thème
+- Authentification basée sur des jetons
 
-## Getting Started
+## Mise en Route
 
-### Prerequisites
-- Node.js (v14.0.0 or later)
-- npm or yarn
+### Prérequis
+- Node.js (v14.0.0 ou ultérieur)
+- npm ou yarn
 
 ### Installation
 
-1. **Clone the repository**
+1. **Cloner le dépôt**
    ```
-   git clone https://github.com/your-username/auth-system.git
-   cd auth-system
+   git clone https://github.com/hadiyatouba0909/mon-react.git
+   cd mon-react
    ```
 
-2. **Install dependencies**
+2. **Installer les dépendances**
    ```
    npm install
-   # or
+   # ou
    yarn install
    ```
 
-3. **Start the development server**
+3. **Démarrer le serveur de développement**
    ```
    npm start
-   # or
+   # ou
    yarn start
    ```
 
-4. **Open your browser and navigate to http://localhost:3000**
+4. **Ouvrir votre navigateur et accéder à http://localhost:3000**
 
-## Project Structure
+## Structure du Projet
 
 ```
 src/
@@ -107,108 +107,108 @@ src/
 └── ...
 ```
 
-## Authentication Flow
+## Flux d'Authentification
 
-### Registration
-1. User fills out the registration form
-2. Form data is validated client-side
-3. Data is sent to authentication service
-4. User is redirected to login page with success message
+### Inscription
+1. L'utilisateur remplit le formulaire d'inscription
+2. Les données du formulaire sont validées côté client
+3. Les données sont envoyées au service d'authentification
+4. L'utilisateur est redirigé vers la page de connexion avec un message de succès
 
-### Login
-1. User enters credentials
-2. Credentials are validated and sent to authentication service
-3. On success, user is redirected to dashboard
-4. User can select "Remember me" for persistent login
-5. Authentication token is stored in localStorage
+### Connexion
+1. L'utilisateur saisit ses identifiants
+2. Les identifiants sont validés et envoyés au service d'authentification
+3. En cas de succès, l'utilisateur est redirigé vers le tableau de bord
+4. L'utilisateur peut sélectionner "Se souvenir de moi" pour une connexion persistante
+5. Le jeton d'authentification est stocké dans le localStorage
 
-### Session Management
-- AuthContext maintains the authentication state
-- Automatic authentication check on application start
-- Protected routes redirect unauthenticated users
-- Current user information is accessible throughout the app
+### Gestion des Sessions
+- AuthContext maintient l'état d'authentification
+- Vérification automatique de l'authentification au démarrage de l'application
+- Les routes protégées redirigent les utilisateurs non authentifiés
+- Les informations de l'utilisateur actuel sont accessibles dans toute l'application
 
-### Theme Management
-- User theme preference is stored in localStorage
-- ThemeContext provides theme state across the application
-- Toggle button for switching between light and dark modes
-- Consistent styling based on selected theme
+### Gestion des Thèmes
+- La préférence de thème de l'utilisateur est stockée dans le localStorage
+- ThemeContext fournit l'état du thème à travers l'application
+- Bouton de basculement pour passer entre les modes clair et sombre
+- Style cohérent basé sur le thème sélectionné
 
-### Password Reset
-1. User enters email on forgot password page
-2. Reset link is sent to user's email
-3. User clicks link and is taken to reset password page
-4. User enters and confirms new password
-5. On success, user is redirected to login page
+### Réinitialisation du Mot de Passe
+1. L'utilisateur saisit son email sur la page de mot de passe oublié
+2. Un lien de réinitialisation est envoyé à l'email de l'utilisateur
+3. L'utilisateur clique sur le lien et est conduit à la page de réinitialisation de mot de passe
+4. L'utilisateur saisit et confirme son nouveau mot de passe
+5. En cas de succès, l'utilisateur est redirigé vers la page de connexion
 
-### Logout
-1. User can log out through the sidebar LogoutButton
-2. Authentication token is removed from localStorage
-3. User session is terminated
-4. User is redirected to login page
+### Déconnexion
+1. L'utilisateur peut se déconnecter via le bouton de déconnexion de la barre latérale
+2. Le jeton d'authentification est supprimé du localStorage
+3. La session utilisateur est terminée
+4. L'utilisateur est redirigé vers la page de connexion
 
-## Technologies Used
+## Technologies Utilisées
 
 ### Frontend
 - React.js (v18.3)
 - React Router (v7.5)
-- Context API for state management (Auth & Theme contexts)
-- Tailwind CSS for styling
-- Responsive design with mobile support
-- PropTypes for component type checking
+- API Context pour la gestion d'état (contextes Auth & Theme)
+- Tailwind CSS pour le style
+- Design responsive avec support mobile
+- PropTypes pour la vérification de type des composants
 
-### UI Features
-- Dark/Light theme toggle with localStorage persistence
-- Theme-aware components that adapt to theme changes
-- Collapsible sidebar for better space utilization
-- Modal system for forms and confirmations
-- Accessible pagination with keyboard navigation
-- Interactive SVG icons
-- Animated transitions and micro-interactions
+### Fonctionnalités UI
+- Basculement thème Clair/Sombre avec persistance localStorage
+- Composants adaptés au thème qui s'adaptent aux changements de thème
+- Barre latérale rétractable pour une meilleure utilisation de l'espace
+- Système de modales pour les formulaires et confirmations
+- Pagination accessible avec navigation au clavier
+- Icônes SVG interactives
+- Transitions animées et micro-interactions
 
-### Backend Services
-- RESTful API integration with Axios
-- Token-based authentication
-- localStorage for persistent authentication
-- Support for MongoDB-style document IDs
+### Services Backend
+- Intégration API RESTful avec Axios
+- Authentification basée sur des jetons
+- localStorage pour l'authentification persistante
+- Prise en charge des ID de document de style MongoDB
 
-## API Integration
-- **api.js**: Configures Axios with base URL and JWT token interceptor for authenticated requests
-- **authService.js**: Handles authentication-related API calls (register, login, logout, user info, password reset)
-- **profileService.js**: Manages user profile updates, password changes, and profile image uploads
-- **productService.js**: Implements CRUD operations for product management
+## Intégration API
+- **api.js**: Configure Axios avec l'URL de base et l'intercepteur de jeton JWT pour les requêtes authentifiées
+- **authService.js**: Gère les appels API liés à l'authentification (inscription, connexion, déconnexion, informations utilisateur, réinitialisation de mot de passe)
+- **profileService.js**: Gère les mises à jour de profil utilisateur, les changements de mot de passe et les téléchargements d'images de profil
+- **productService.js**: Implémente les opérations CRUD pour la gestion des produits
 
-## Dashboard Features
-- Displays a paginated list of products with search functionality
-- Supports CRUD operations through modal interfaces
-- Implements responsive design with theme-aware styling
-- Includes animated transitions and loading states
-- Handles error states and empty search results
+## Fonctionnalités du Tableau de Bord
+- Affiche une liste paginée de produits avec une fonctionnalité de recherche
+- Prend en charge les opérations CRUD via des interfaces modales
+- Implémente un design responsive avec un style adapté au thème
+- Inclut des transitions animées et des états de chargement
+- Gère les états d'erreur et les résultats de recherche vides
 
-## Profile Management
-- Allows users to update their profile information (name, phone, address)
-- Provides success/error feedback for profile updates
-- Integrates with AuthContext for real-time user data updates
-- Supports theme-aware styling
+## Gestion de Profil
+- Permet aux utilisateurs de mettre à jour leurs informations de profil (nom, téléphone, adresse)
+- Fournit un retour succès/erreur pour les mises à jour de profil
+- S'intègre avec AuthContext pour les mises à jour de données utilisateur en temps réel
+- Prend en charge le style adapté au thème
 
-## Routing
-- Implements protected and public routes using React Router
-- Automatically redirects authenticated users to dashboard
-- Redirects unauthenticated users to login page
-- Handles unknown routes by redirecting to login
-- Includes loading states during authentication checks
+## Routage
+- Implémente des routes protégées et publiques à l'aide de React Router
+- Redirige automatiquement les utilisateurs authentifiés vers le tableau de bord
+- Redirige les utilisateurs non authentifiés vers la page de connexion
+- Gère les routes inconnues en redirigeant vers la connexion
+- Inclut des états de chargement pendant les vérifications d'authentification
 
-## Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## Contribution
+1. Forker le dépôt
+2. Créer votre branche de fonctionnalité (`git checkout -b fonctionnalite/super-fonctionnalite`)
+3. Committer vos changements (`git commit -m 'Ajouter une super fonctionnalité'`)
+4. Pousser vers la branche (`git push origin fonctionnalite/super-fonctionnalite`)
+5. Ouvrir une Pull Request
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Licence
+Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
 
-## Acknowledgements
+## Remerciements
 - React
 - Tailwind CSS
 - React Router
